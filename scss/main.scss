@@ -1,0 +1,75 @@
+// Primary Color #0741ad
+// Secondary Color #3590d5
+
+.navbar {
+  .container {
+    .navbar-brand {
+      img {
+        min-width: 50px;
+        min-height: 50px;
+      }
+    }
+  }
+}
+
+.masthead {
+  .container {
+    // btn.focus di styles.css dimatikan
+
+    .btn-tellMe {
+      color: #fff;
+      background-color: #0741ad;
+      //   border-color: #0741ad;
+      &:hover {
+        color: #fff;
+        background-color: #064ac7;
+      }
+    }
+  }
+}
+
+#services {
+  .container {
+    .row {
+      .blue-primary {
+        color: #0741ad;
+      }
+    }
+  }
+}
+
+#contact {
+  .container {
+    #contactForm {
+      .btn-sendMessage {
+        color: #fff;
+        background-color: #0741ad;
+        &:hover {
+          color: #fff;
+          background-color: #064ac7;
+        }
+      }
+    }
+  }
+}
+
+#portfolioModal1 {
+  .btn-close-project {
+    color: #fff;
+    background-color: #0741ad;
+    &:hover {
+      color: #fff;
+      background-color: #064ac7;
+    }
+  }
+}
+
+// .footer {
+//   .container {
+//     .row {
+//       .custom-footer-text {
+//         color: #0741ad !important;
+//       }
+//     }
+//   }
+// }

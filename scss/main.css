@@ -1,0 +1,39 @@
+.navbar .container .navbar-brand img {
+  min-width: 50px;
+  min-height: 50px;
+}
+
+.masthead .container .btn-tellMe {
+  color: #fff;
+  background-color: #0741ad;
+}
+
+.masthead .container .btn-tellMe:hover {
+  color: #fff;
+  background-color: #064ac7;
+}
+
+#services .container .row .blue-primary {
+  color: #0741ad;
+}
+
+#contact .container #contactForm .btn-sendMessage {
+  color: #fff;
+  background-color: #0741ad;
+}
+
+#contact .container #contactForm .btn-sendMessage:hover {
+  color: #fff;
+  background-color: #064ac7;
+}
+
+#portfolioModal1 .btn-close-project {
+  color: #fff;
+  background-color: #0741ad;
+}
+
+#portfolioModal1 .btn-close-project:hover {
+  color: #fff;
+  background-color: #064ac7;
+}
+/*# sourceMappingURL=main.css.map */
