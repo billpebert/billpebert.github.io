@@ -4,7 +4,6 @@
   border-radius: 25px;
   font-size: 16px;
   font-weight: map-get($map: $fw, $key: medium);
-  transition: 1s;
 }
 
 .btn-hire {
@@ -16,6 +15,5 @@
   &:hover {
     background-color: $heavy-red;
     color: $light;
-    font-size: 14px;
   }
 }
