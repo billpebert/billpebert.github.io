@@ -1,0 +1,11 @@
+nav.navbar {
+  .navbar-nav {
+    .nav-link {
+      color: $light-red;
+      font-size: 14px;
+      font-weight: map-get($map: $fw, $key: semi-bold);
+      margin-right: 20px;
+    }
+  }
+  padding-bottom: 100px;
+}

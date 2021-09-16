@@ -1,0 +1,71 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600&display=swap");
+* {
+  font-family: "Rubik", sans-serif;
+}
+
+.btn-master, .btn-hire {
+  padding: 12px 27px;
+  border: none;
+  border-radius: 12px;
+  font-size: 16px;
+  font-weight: 500;
+  transition: 1s;
+}
+
+.btn-hire {
+  background-color: #ff6a88;
+  color: #ffffff;
+  font-weight: 400;
+}
+.btn-hire:hover {
+  background-color: #fb4141;
+  color: #ffffff;
+  font-size: 14px;
+}
+
+nav.navbar {
+  padding-bottom: 100px;
+}
+nav.navbar .navbar-nav .nav-link {
+  color: #ff6a88;
+  font-size: 14px;
+  font-weight: 600;
+  margin-right: 20px;
+}
+
+.hero .copywriting .my-name {
+  font-size: 58px;
+  font-weight: 600;
+  color: #404040;
+}
+.hero .copywriting p {
+  font-size: 16px;
+  font-weight: 400;
+  color: #bfbfbf;
+  letter-spacing: 5%;
+}
+.hero .social-icons ul {
+  list-style-type: none;
+}
+.hero .social-icons ul li {
+  margin-bottom: 10px;
+}
+.hero .social-icons ul li a.icons {
+  text-decoration: none;
+}
+.hero .social-icons ul li a.icons img {
+  width: 36px;
+  transition: 1s;
+}
+.hero .social-icons ul li a.icons img:hover {
+  width: 48px;
+}
+.hero .social-icons ul li a.icons span {
+  transition: 1s;
+  opacity: 0;
+}
+.hero .social-icons ul li a.icons span:hover {
+  opacity: 1;
+  font-size: 14px;
+  color: #bfbfbf;
+}/*# sourceMappingURL=main.css.map */

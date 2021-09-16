@@ -1,0 +1,21 @@
+.btn-master {
+  padding: 12px 27px;
+  border: none;
+  border-radius: 12px;
+  font-size: 16px;
+  font-weight: map-get($map: $fw, $key: medium);
+  transition: 1s;
+}
+
+.btn-hire {
+  @extend .btn-master;
+  background-color: $light-red;
+  color: $light;
+  font-weight: map-get($map: $fw, $key: regular);
+
+  &:hover {
+    background-color: $heavy-red;
+    color: $light;
+    font-size: 14px;
+  }
+}

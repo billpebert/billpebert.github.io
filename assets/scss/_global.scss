@@ -1,0 +1,45 @@
+// START: index page
+.hero {
+  .copywriting {
+    .my-name {
+      font-size: 58px;
+      font-weight: map-get($map: $fw, $key: semi-bold);
+      color: $dark;
+    }
+    p {
+      font-size: 16px;
+      font-weight: map-get($map: $fw, $key: regular);
+      color: $grey;
+      letter-spacing: 5%;
+    }
+  }
+
+  .social-icons {
+    ul {
+      list-style-type: none;
+      li {
+        margin-bottom: 10px;
+        a.icons {
+          text-decoration: none;
+          img {
+            width: 36px;
+            transition: 1s;
+            &:hover {
+              width: 48px;
+            }
+          }
+          span {
+            transition: 1s;
+            opacity: 0;
+            &:hover {
+              opacity: 1;
+              font-size: 14px;
+              color: $grey;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+// END: index page
