@@ -6,7 +6,7 @@
 .btn-master, .btn-hire {
   padding: 12px 27px;
   border: none;
-  border-radius: 12px;
+  border-radius: 25px;
   font-size: 16px;
   font-weight: 500;
   transition: 1s;
@@ -24,13 +24,65 @@
 }
 
 nav.navbar {
-  padding-bottom: 100px;
+  padding-bottom: 70px;
+  /* ANIMATED X */
 }
 nav.navbar .navbar-nav .nav-link {
   color: #ff6a88;
   font-size: 14px;
   font-weight: 600;
   margin-right: 20px;
+}
+nav.navbar .navbar-toggler {
+  border: none;
+}
+nav.navbar .navbar-toggler .hamburger {
+  width: 48px;
+  height: 48px;
+}
+nav.navbar .navbar-toggler:focus {
+  outline: none !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+nav.navbar .navbar-toggler.x {
+  border: none;
+}
+nav.navbar .navbar-toggler.x:focus {
+  outline: none;
+}
+nav.navbar .navbar-toggler.x[aria-expanded=true] .icon-bar:nth-of-type(1) {
+  transform: rotate(45deg);
+  transform-origin: 10% 10%;
+}
+nav.navbar .navbar-toggler.x[aria-expanded=true] .icon-bar:nth-of-type(2) {
+  opacity: 0;
+  filter: alpha(opacity=0);
+}
+nav.navbar .navbar-toggler.x[aria-expanded=true] .icon-bar:nth-of-type(3) {
+  transform: rotate(-45deg);
+  transform-origin: 10% 90%;
+}
+nav.navbar .navbar-toggler.x .icon-bar {
+  width: 22px;
+  display: block;
+  height: 2px;
+  border-radius: 5px;
+  background-color: #ff6a88;
+  transition: all 0.5s;
+}
+nav.navbar .navbar-toggler.x .icon-bar + .icon-bar {
+  margin-top: 4px;
+}
+nav.navbar .navbar-toggler.x .icon-bar:nth-of-type(1) {
+  transform: rotate(0);
+}
+nav.navbar .navbar-toggler.x .icon-bar:nth-of-type(2) {
+  opacity: 1;
+  filter: alpha(opacity=100);
+}
+nav.navbar .navbar-toggler.x .icon-bar:nth-of-type(3) {
+  transform: rotate(0);
 }
 
 .hero .copywriting .my-name {
@@ -43,6 +95,16 @@ nav.navbar .navbar-nav .nav-link {
   font-weight: 400;
   color: #bfbfbf;
   letter-spacing: 5%;
+}
+.hero .hero-image {
+  -o-object-fit: contain;
+     object-fit: contain;
+  width: 100%;
+}
+@media only screen and (max-width: 600px) {
+  .hero .hero-image {
+    width: 75%;
+  }
 }
 .hero .social-icons ul {
   list-style-type: none;
@@ -68,4 +130,10 @@ nav.navbar .navbar-nav .nav-link {
   opacity: 1;
   font-size: 14px;
   color: #bfbfbf;
+}
+.hero .social-icons-mobile {
+  padding: 30px;
+}
+.hero .social-icons-mobile a img {
+  width: 36px;
 }/*# sourceMappingURL=main.css.map */

@@ -23,9 +23,17 @@
             <a class="navbar-brand" href="index.html">
                 <img src="assets/image/bilpo.svg" alt="bilpo" />
             </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+            <!-- <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
                 aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
+            </button> -->
+
+            <button class="navbar-toggler x" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div class="navbar-nav ms-auto">
@@ -47,14 +55,16 @@
                     <div class="copywriting">
                         <div class="my-name">Billy Ponto</div>
                         <p>Web Dev and Designer</p>
-                        <a href="https://wa.me/6282293881704" class="btn btn-hire">Hire Me</a>
+                        <a href="https://wa.me/6282293881704" class="btn btn-hire mt-1 mb-4">Hire Me</a>
                     </div>
                 </div>
                 <div class="col-lg-6 col-sm-6 text-center">
-                    <img src="assets/image/img.svg" alt="imaginery" />
+                    <img src="assets/image/img.svg" class="hero-image" alt="imaginery" />
                 </div>
-                <div class="col-1 social-icons">
-                    <ul class="d-lg-block d-sm-none">
+
+                <!-- icons for desktop -->
+                <div class="col-1 social-icons d-lg-block d-none">
+                    <ul>
                         <li>
                             <a href="https://wa.me/6282293881704" class="icons" target="_blank">
                                 <img src="assets/image/whatsapp-1597564.svg" alt="ic" />
@@ -62,25 +72,44 @@
                             </a>
                         </li>
                         <li>
-                            <a href="https://github.com/billpebert/" class="icons">
+                            <a href="https://github.com/billpebert/" class="icons" target="_blank">
                                 <img src="assets/image/githuub-1597554.svg" alt="ic" />
                                 <span>GitHub</span>
                             </a>
                         </li>
                         <li>
-                            <a href="https://instagram.com/billy.u9" class="icons">
+                            <a href="https://instagram.com/billy.u9" class="icons" target="_blank">
                                 <img src="assets/image/instagram-1597574.svg" alt="ic" />
                                 <span>Instagram</span>
                             </a>
                         </li>
                         <li>
-                            <a href="https://dribbble.com/billpebert" class="icons">
+                            <a href="https://dribbble.com/billpebert" class="icons" target="_blank">
                                 <img src="assets/image/dribbble-1597579.svg" alt="ic" />
                                 <span>Dribbble</span>
                             </a>
                         </li>
                     </ul>
                 </div>
+
+                <!-- icons for mobile-->
+                <div class="row social-icons-mobile d-lg-none d-block">
+                    <div class="col-12 d-flex justify-content-around">
+                        <a href="https://wa.me/6282293881704" class="icons" target="_blank" target="_blank">
+                            <img src="assets/image/whatsapp-1597564.svg" alt="ic" />
+                        </a>
+                        <a href="https://github.com/billpebert/" class="icons" target="_blank">
+                            <img src="assets/image/githuub-1597554.svg" alt="ic" />
+                        </a>
+                        <a href="https://instagram.com/billy.u9" class="icons" target="_blank">
+                            <img src="assets/image/instagram-1597574.svg" alt="ic" />
+                        </a>
+                        <a href="https://dribbble.com/billpebert" class="icons" target="_blank">
+                            <img src="assets/image/dribbble-1597579.svg" alt="ic" />
+                        </a>
+                    </div>
+                </div>
+
             </div>
         </div>
     </section>
