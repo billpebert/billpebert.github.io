@@ -10,6 +10,7 @@
   @extend .btn-master;
   background-color: $light-red;
   color: $light;
+  transition: 1s;
 
   &:hover {
     background-color: $heavy-red;

@@ -14,6 +14,7 @@
 .btn-hire {
   background-color: #ff6a88;
   color: #ffffff;
+  transition: 1s;
 }
 .btn-hire:hover {
   background-color: #fb4141;
@@ -92,16 +93,31 @@ nav.navbar .navbar-toggler.x .icon-bar:nth-of-type(3) {
   transform: rotate(0);
 }
 
+p, footer span {
+  margin: 0;
+  font-weight: 400;
+  font-size: 16px;
+  color: #c7c9d9;
+  letter-spacing: 1px;
+}
+
+h1 {
+  font-weight: 600;
+  font-size: 32px;
+  color: #404040;
+  margin-bottom: 15px;
+}
+
+h5 {
+  font-weight: 600;
+  color: #404040;
+  font-size: 16px;
+}
+
 section.hero .copywriting .my-name {
   font-size: 58px;
   font-weight: 600;
   color: #404040;
-}
-section.hero .copywriting p {
-  font-size: 16px;
-  font-weight: 400;
-  color: #bfbfbf;
-  letter-spacing: 5%;
 }
 section.hero .hero-image {
   -o-object-fit: contain;
@@ -146,7 +162,7 @@ section.hero .social-icons-mobile a img {
 }
 
 section.tools {
-  padding: 100px 10px 10px 0;
+  padding: 100px 10px 0;
 }
 section.tools .content {
   border: 0;
@@ -158,21 +174,6 @@ section.tools .content img {
   width: 48px;
 }
 
-p {
-  margin: 0;
-  font-weight: 400;
-  font-size: 16px;
-  color: #c7c9d9;
-  letter-spacing: 1px;
-}
-
-h1 {
-  font-weight: 600;
-  font-size: 32px;
-  color: #404040;
-  margin-bottom: 15px;
-}
-
 section.service {
   padding-top: 100px;
 }
@@ -182,8 +183,14 @@ section.service .service-item {
   border-radius: 38px 28px 14px 14px;
   transition: 1s;
 }
+@media only screen and (max-width: 600px) {
+  section.service .service-item {
+    margin-top: 15px;
+  }
+}
 section.service .service-item img {
   width: 52px;
+  padding-bottom: 15px;
 }
 section.service .service-item h4 {
   font-weight: 600;
@@ -192,4 +199,29 @@ section.service .service-item h4 {
 }
 section.service .service-item:hover {
   box-shadow: 0px 8px 18px rgba(178, 177, 255, 0.25);
+}
+
+section.works {
+  padding: 100px 10px 0px;
+}
+section.works .card-porto {
+  padding: 18px;
+  background: #f6f9ff;
+  border-radius: 18px;
+  max-width: 100%;
+  margin-bottom: 20px;
+}
+section.works .card-porto img.porto-image {
+  border-radius: 12px;
+  max-width: inherit;
+  -o-object-fit: contain;
+     object-fit: contain;
+  margin-bottom: 15px;
+}
+
+footer {
+  padding-top: 100px;
+}
+footer span {
+  font-size: 12px;
 }/*# sourceMappingURL=main.css.map */
