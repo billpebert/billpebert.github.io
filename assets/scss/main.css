@@ -3,21 +3,30 @@
   font-family: "Rubik", sans-serif;
 }
 
-.btn-master, .btn-hire {
+.btn-master, .btn-yellow, .btn-hire {
   padding: 12px 27px;
   border: none;
   border-radius: 25px;
   font-size: 16px;
-  font-weight: 500;
+  font-weight: 400;
 }
 
 .btn-hire {
   background-color: #ff6a88;
   color: #ffffff;
-  font-weight: 400;
 }
 .btn-hire:hover {
   background-color: #fb4141;
+  color: #ffffff;
+}
+
+.btn-yellow {
+  border-radius: 12px !important;
+  background-color: #f7cc74;
+  color: #ffffff;
+}
+.btn-yellow:hover {
+  background-color: #c7c9d9;
   color: #ffffff;
 }
 
@@ -29,7 +38,7 @@ nav.navbar .navbar-nav .nav-link {
   color: #ff6a88;
   font-size: 14px;
   font-weight: 600;
-  margin-left: 20px;
+  margin-left: 50px;
 }
 nav.navbar .navbar-toggler {
   border: none;
@@ -148,10 +157,39 @@ section.tools .content {
 section.tools .content img {
   width: 48px;
 }
-section.tools .content p {
+
+p {
   margin: 0;
   font-weight: 400;
   font-size: 16px;
   color: #c7c9d9;
   letter-spacing: 1px;
+}
+
+h1 {
+  font-weight: 600;
+  font-size: 32px;
+  color: #404040;
+  margin-bottom: 15px;
+}
+
+section.service {
+  padding-top: 100px;
+}
+section.service .service-item {
+  padding: 20px;
+  background-color: #f6f9ff;
+  border-radius: 38px 28px 14px 14px;
+  transition: 1s;
+}
+section.service .service-item img {
+  width: 52px;
+}
+section.service .service-item h4 {
+  font-weight: 600;
+  font-size: 16px;
+  color: #c7c9d9;
+}
+section.service .service-item:hover {
+  box-shadow: 0px 8px 18px rgba(178, 177, 255, 0.25);
 }/*# sourceMappingURL=main.css.map */
