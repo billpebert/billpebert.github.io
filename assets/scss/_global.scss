@@ -138,6 +138,11 @@ section.works {
 
 footer {
   padding-top: 100px;
+  padding-bottom: 30px;
+
+  img {
+    width: 68px;
+  }
   span {
     @extend p;
     font-size: 12px;

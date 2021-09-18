@@ -221,6 +221,10 @@ section.works .card-porto img.porto-image {
 
 footer {
   padding-top: 100px;
+  padding-bottom: 30px;
+}
+footer img {
+  width: 68px;
 }
 footer span {
   font-size: 12px;
