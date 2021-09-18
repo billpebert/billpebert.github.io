@@ -83,55 +83,75 @@ nav.navbar .navbar-toggler.x .icon-bar:nth-of-type(3) {
   transform: rotate(0);
 }
 
-.hero .copywriting .my-name {
+section.hero .copywriting .my-name {
   font-size: 58px;
   font-weight: 600;
   color: #404040;
 }
-.hero .copywriting p {
+section.hero .copywriting p {
   font-size: 16px;
   font-weight: 400;
   color: #bfbfbf;
   letter-spacing: 5%;
 }
-.hero .hero-image {
+section.hero .hero-image {
   -o-object-fit: contain;
      object-fit: contain;
   width: 80%;
 }
 @media only screen and (max-width: 600px) {
-  .hero .hero-image {
+  section.hero .hero-image {
     width: 75%;
   }
 }
-.hero .social-icons ul {
+section.hero .social-icons ul {
   list-style-type: none;
 }
-.hero .social-icons ul li {
+section.hero .social-icons ul li {
   margin-bottom: 10px;
 }
-.hero .social-icons ul li a.icons {
+section.hero .social-icons ul li a.icons {
   text-decoration: none;
 }
-.hero .social-icons ul li a.icons img {
+section.hero .social-icons ul li a.icons img {
   width: 36px;
   transition: 1s;
 }
-.hero .social-icons ul li a.icons img:hover {
+section.hero .social-icons ul li a.icons img:hover {
   width: 48px;
 }
-.hero .social-icons ul li a.icons span {
+section.hero .social-icons ul li a.icons span {
   transition: 1s;
   opacity: 0;
 }
-.hero .social-icons ul li a.icons span:hover {
+section.hero .social-icons ul li a.icons span:hover {
   opacity: 1;
   font-size: 14px;
   color: #bfbfbf;
 }
-.hero .social-icons-mobile {
+section.hero .social-icons-mobile {
   padding: 30px;
 }
-.hero .social-icons-mobile a img {
+section.hero .social-icons-mobile a img {
   width: 36px;
+}
+
+section.tools {
+  padding-top: 100px;
+}
+section.tools .content {
+  border: 0;
+  border-radius: 18px;
+  background-color: #f6f9ff;
+  padding: 25px 86px;
+}
+section.tools .content img {
+  max-width: 10%;
+}
+section.tools .content p {
+  margin: 0;
+  font-weight: 400;
+  font-size: 16px;
+  color: #c7c9d9;
+  letter-spacing: 1px;
 }/*# sourceMappingURL=main.css.map */
