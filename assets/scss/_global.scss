@@ -62,14 +62,14 @@ section.hero {
 }
 
 section.tools {
-  padding-top: 100px;
+  padding: 100px 10px 10px 0;
   .content {
     border: 0;
     border-radius: 18px;
     background-color: $light-grey;
-    padding: 25px 86px;
+    padding: 25px 20px;
     img {
-      max-width: 10%;
+      width: 48px;
     }
     p {
       margin: 0;

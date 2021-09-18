@@ -137,16 +137,16 @@ section.hero .social-icons-mobile a img {
 }
 
 section.tools {
-  padding-top: 100px;
+  padding: 100px 10px 10px 0;
 }
 section.tools .content {
   border: 0;
   border-radius: 18px;
   background-color: #f6f9ff;
-  padding: 25px 86px;
+  padding: 25px 20px;
 }
 section.tools .content img {
-  max-width: 10%;
+  width: 48px;
 }
 section.tools .content p {
   margin: 0;
