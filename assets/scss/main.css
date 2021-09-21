@@ -41,6 +41,11 @@ nav.navbar .navbar-nav .nav-link {
   font-weight: 600;
   margin-left: 50px;
 }
+@media only screen and (max-width: 600px) {
+  nav.navbar {
+    padding-bottom: 65px;
+  }
+}
 nav.navbar .navbar-toggler {
   border: none;
 }
@@ -171,7 +176,7 @@ section.tools .content {
   padding: 25px 20px;
 }
 section.tools .content img {
-  width: 48px;
+  width: 36px;
 }
 
 section.service {
@@ -210,13 +215,18 @@ section.works .card-porto {
   border-radius: 18px;
   max-width: 100%;
   margin-bottom: 20px;
+  transition: 1s;
 }
 section.works .card-porto img.porto-image {
   border-radius: 12px;
   max-width: inherit;
-  -o-object-fit: contain;
-     object-fit: contain;
+  height: 200px;
+  -o-object-fit: cover;
+     object-fit: cover;
   margin-bottom: 15px;
+}
+section.works .card-porto:hover {
+  box-shadow: 0px 8px 18px rgba(178, 177, 255, 0.25);
 }
 
 footer {
