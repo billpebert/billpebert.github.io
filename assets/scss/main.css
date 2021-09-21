@@ -39,7 +39,7 @@ nav.navbar .navbar-nav .nav-link {
   color: #ff6a88;
   font-size: 14px;
   font-weight: 600;
-  margin-left: 50px;
+  margin-left: 30px;
 }
 @media only screen and (max-width: 600px) {
   nav.navbar {
@@ -187,10 +187,12 @@ section.service .service-item {
   background-color: #f6f9ff;
   border-radius: 38px 28px 14px 14px;
   transition: 1s;
+  width: 100%;
 }
 @media only screen and (max-width: 600px) {
   section.service .service-item {
     margin-top: 15px;
+    width: 65%;
   }
 }
 section.service .service-item img {
@@ -220,10 +222,10 @@ section.works .card-porto {
 section.works .card-porto img.porto-image {
   border-radius: 12px;
   max-width: inherit;
-  height: 200px;
   -o-object-fit: cover;
      object-fit: cover;
   margin-bottom: 15px;
+  display: flex;
 }
 section.works .card-porto:hover {
   box-shadow: 0px 8px 18px rgba(178, 177, 255, 0.25);
@@ -234,7 +236,7 @@ footer {
   padding-bottom: 30px;
 }
 footer img {
-  width: 68px;
+  max-width: 68px;
 }
 footer span {
   font-size: 12px;
