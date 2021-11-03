@@ -2,7 +2,7 @@ nav.navbar {
   .navbar-nav {
     .nav-link {
       color: $light-red;
-      font-size: 14px;
+      font-size: 18px;
       font-weight: map-get($map: $fw, $key: semi-bold);
       margin-left: 30px;
     }
