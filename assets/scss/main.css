@@ -1,6 +1,6 @@
-@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
 * {
-  font-family: "Rubik", sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
 .btn-master, .btn-yellow, .btn-hire {
@@ -121,7 +121,7 @@ h5 {
 
 section.hero .copywriting .my-name {
   font-size: 58px;
-  font-weight: 600;
+  font-weight: 700;
   color: #404040;
 }
 section.hero .hero-image {
@@ -167,7 +167,7 @@ section.hero .social-icons-mobile a img {
 }
 
 section.tools {
-  padding: 100px 10px 0;
+  padding: 100px 10px;
 }
 section.tools .content {
   border: 0;
@@ -180,7 +180,7 @@ section.tools .content img {
 }
 
 section.service {
-  padding-top: 100px;
+  padding: 100px 0;
 }
 section.service .service-item {
   padding: 20px;
@@ -209,7 +209,7 @@ section.service .service-item:hover {
 }
 
 section.works {
-  padding: 100px 10px 0px;
+  padding: 100px 10px;
 }
 section.works .card-porto {
   padding: 18px;
@@ -221,10 +221,10 @@ section.works .card-porto {
 }
 section.works .card-porto img.porto-image {
   border-radius: 12px;
-  max-width: inherit;
+  width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
-  height: 205px;
+  height: 210px;
   margin-bottom: 15px;
   display: flex;
 }
@@ -233,8 +233,8 @@ section.works .card-porto:hover {
 }
 
 footer {
-  padding-top: 100px;
-  padding-bottom: 30px;
+  padding: 30px 0;
+  background-color: #f6f9ff;
 }
 footer img {
   max-width: 68px;
