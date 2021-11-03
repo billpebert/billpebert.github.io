@@ -224,6 +224,7 @@ section.works .card-porto img.porto-image {
   max-width: inherit;
   -o-object-fit: cover;
      object-fit: cover;
+  height: 205px;
   margin-bottom: 15px;
   display: flex;
 }
