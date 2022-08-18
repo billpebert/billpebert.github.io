@@ -6,7 +6,7 @@ const filterInput = document.querySelector('.filter-links');
 const buildIcon = (icons) => {
     // console.log(icons)
     return icons.map(icon => {
-        return `<span class='${icon.name} ${icon.color} text-2xl'></span>`;
+        return icon.name == 'tailwindcss' ? '<img src="./assets/image/tailwind-logomark.svg" class="w-7 shadow-none border-none"/>' : `<span class='${icon.name} ${icon.color} text-2xl'></span>`;
     }).join(' ')
 };
 
@@ -37,7 +37,9 @@ const displayLinks = (links) => {
                 <a href='${buildUrl(link)}' class='text-white absolute z-10 inset-0' target='_blank'>
                 </a>
                 <h3 class='text-xl font-medium text-white'>
-                    ${buildIcon(link.icons)}
+                    <span class='flex justify-center gap-3'>
+                        ${buildIcon(link.icons)}
+                    </span>
                     <br/> ${link.name}
                 </h3>
                 <div class="flex items-center gap-3">
@@ -76,12 +78,13 @@ const links = [
         liveSiteLink: 'https://bapontar.netlify.app/',
     },
     {
-        name: 'Furniture App with Tailwindcss',
+        name: 'Furniture App',
         url: 'luxspace-react',
         icons: [
             { name: 'fa-brands fa-html5', color: 'text-orange-600' },
             { name: 'fa-brands fa-square-js', color: 'text-yellow-300' },
             { name: 'fa-brands fa-react', color: 'text-sky-600' },
+            { name: 'tailwindcss', color: '' },
         ],
         iconColor: 'text-sky-600',
         liveSiteLink: 'https://bilpo-luxspace-react.netlify.app/',
@@ -135,6 +138,16 @@ const links = [
             { name: 'fa-brands fa-sass', color: 'text-pink-500' },
         ],
         liveSiteLink: 'https://fe-broperti.netlify.app/',
+    },
+    {
+        name: 'getshayna.com content',
+        url: 'fe-broperti',
+        icons: [
+            { name: 'fa-brands fa-html5', color: 'text-orange-600' },
+            { name: 'fa-brands fa-square-js', color: 'text-yellow-300' },
+            { name: 'tailwindcss', color: '' },
+        ],
+        liveSiteLink: 'https://getshayna-element.netlify.app/',
     },
 ];
 
