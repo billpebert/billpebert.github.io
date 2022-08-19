@@ -21,7 +21,7 @@ const buildUrl = (github) => {
 const buildLiveSiteUrl = (link) => {
     return `
         <a href="${link.liveSiteLink}" class="relative z-20 hover:underline decoration-sky-400 decoration-2" target="_blank">
-            <i class="fa-brands fa-chrome text-white not-italic"></i>
+            <i class="fa-brands fa-chrome dark:text-white text-slate-800 not-italic"></i>
             Live Site
         </a>
     `;
@@ -34,9 +34,9 @@ const displayLinks = (links) => {
         listItem.classList.add('link');
         listItem.innerHTML = `
             <div class='flex flex-col items-center gap-4 relative'>
-                <a href='${buildUrl(link.githubRepo)}' class='text-white absolute z-10 inset-0' target='_blank'>
+                <a href='${buildUrl(link.githubRepo)}' class='dark:text-white text-slate-800 absolute z-10 inset-0' target='_blank'>
                 </a>
-                <h3 class='text-xl font-medium text-white'>
+                <h3 class='text-xl font-medium dark:text-white text-slate-800'>
                     <span class='flex justify-center gap-3'>
                         ${buildIcon(link.icons)}
                     </span>
