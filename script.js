@@ -269,6 +269,16 @@ const links = [
         ],
         liveSiteLink: 'https://billpebert.github.io/powerhuman-tailwind/',
     },
+    {
+        name: 'Travel - Travland',
+        githubRepo: 'bwa-elements/tree/main/travland',
+        icons: [
+            { name: 'fa-brands fa-html5', color: 'text-orange-600' },
+            { name: 'fa-brands fa-square-js', color: 'text-yellow-300' },
+            { name: 'tailwindcss', color: '' },
+        ],
+        liveSiteLink: 'https://getshayna-element.netlify.app/travland/',
+    },
 ];
 
 displayLinks(links);
