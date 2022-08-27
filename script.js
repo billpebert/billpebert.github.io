@@ -120,6 +120,18 @@ const links = [
         liveSiteLink: 'https://fe-compette.netlify.app/',
     },
     {
+        name: 'Cloning ~ BuildWith Angga',
+        githubRepo: 'bwa-platform-frontend',
+        icons: [
+            { name: 'fa-brands fa-html5', color: 'text-orange-600' },
+            { name: 'fa-brands fa-square-js', color: 'text-yellow-300' },
+            { name: 'fa-brands fa-react', color: 'text-sky-600' },
+            { name: 'tailwindcss', color: '' },
+        ],
+        iconColor: 'text-sky-600',
+        liveSiteLink: 'https://bwa-platform-frontend.netlify.app/',
+    },
+    {
         name: 'Landing Page Telepatia',
         githubRepo: 'fe-telepatia-sass',
         icons: [
