@@ -1,4 +1,4 @@
-@media (prefers-color-scheme: light) {
+/* @media (prefers-color-scheme: light) { */
     :root {
         --text: #111;
         --accent: #1688f0;
@@ -6,9 +6,9 @@
         --bg-link: #f0f0f0;
         --bg-alt: #f5f5f5;
     }
-}
+/* } */
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
     :root {
         --text: #e5e5e5;
         --accent: #1688f0;
@@ -16,7 +16,7 @@
         --bg-link: #0f0f1a;
         --bg-alt: #0a0a0f;
     }
-}
+} */
 
 * {
     box-sizing: border-box;
