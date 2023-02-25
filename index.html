@@ -12,7 +12,7 @@
     <link rel="manifest" href="assets/image/favicon/site.webmanifest">
 
     <link rel="stylesheet" href="dist/main.css" />
-    <link rel="stylesheet" href="style.css" />
+    <!-- <link rel="stylesheet" href="style.css" /> -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/brands.min.css"
         integrity="sha512-nS1/hdh2b0U8SeA8tlo7QblY6rY6C+MgkZIeRzJQQvMsFfMQFUKp+cgMN2Uuy+OtbQ4RoLMIlO2iF7bIEY3Oyg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -20,8 +20,9 @@
 </head>
 
 <body>
-    <main class="container pb-12">
-        <div class="flex items-center justify-center gap-8 py-10">
+    <!-- <img src="/assets/svg/background.svg" class="absolute top-0 right-0 max-h-screen -z-10" alt=""> -->
+    <main class="container">
+        <section class="flex items-center justify-center gap-8 pt-10">
             <!-- START: Fiverr Badge -->
             <!-- Put this code anywhere in the body of your page where you want the badge to show up. -->
             <div itemscope itemtype='http://schema.org/Person' class='fiverr-seller-widget'
@@ -47,34 +48,35 @@
             <script id='fiverr-seller-widget-script-607d511b-8f56-44bd-9758-d3f9ef9a41fa'
                 src='https://widgets.fiverr.com/api/v1/seller/billpebert?widget_id=607d511b-8f56-44bd-9758-d3f9ef9a41fa'
                 data-config='{"category_name":"Programming \u0026 Tech"}' async='true' defer='true'></script>
-
             <!-- END: Fiverr Badge -->
 
             <div class="flex flex-col gap-3">
-                <div class="text-2xl font-semibold dark:text-white text-slate-800">
+                <div class="text-2xl font-bold md:text-4xl dark:text-white text-slate-800">
                     Billy Petra Gilbert
                 </div>
-                <div class="flex flex-col items-start gap-4">
+                <div class="flex items-start gap-4">
                     <!-- <a href="https://wa.me/6282293881704" class="text-xl">
                         <span class="text-green-500 fa-brands fa-whatsapp"></span>
                     </a> -->
                     <a href="https://github.com/billpebert/" class="text-3xl">
                         <span class="text-slate-800 dark:text-white fa-brands fa-github"></span>
                     </a>
-                    <a href="https://drive.google.com/file/d/1cBzn3l5a5ha3x165j8P1hcTGuxAvLYsg/view?usp=sharing"
-                        class="px-6 py-2 text-sm font-semibold text-white bg-blue-600 rounded-xl max-w-max"
+                    <a href="/assets/cv/CV-Billy-080223.pdf"
+                        class="px-5 py-2 text-sm font-bold text-white bg-indigo-600 rounded-full max-w-max"
                         target="_blank">
                         Curriculum Vitae
                     </a>
                 </div>
             </div>
-        </div>
-        <section class="links">
-            <input type="text" class="filter-links hide" placeholder="Search Project" />
-            <ul class="link-list mt-7"></ul>
         </section>
-        <h4 class="text-center">
-            Nice to meet you :)
+        <section class="flex flex-col items-center pt-20 links">
+            <input type="text" class="py-3 rounded-full filter-links hide bg-slate-50 px-7 w-1/2 md:min-w-[300px]focus:ring-2 focus:ring-indigo-500 focus:outline-none" placeholder="Find Project" />
+
+            <!-- Content generated from script.js -->
+            <ul class="grid w-full gap-6 mt-10 link-list md:grid-cols-3"></ul>
+        </section>
+        <h4 class="pt-20 pb-5 text-center text-slate-500">
+            Nice to meet you 😉
         </h4>
     </main>
 </body>

@@ -4,7 +4,10 @@ module.exports = {
   content: ["./*.{html,js}"],
   theme: {
     fontFamily: {
-      poppins: "Poppins, sans-serif",
+      nunito: "Nunito, sans-serif",
+    },
+    container: {
+      center: true,
     },
     extend: {},
   },

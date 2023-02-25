@@ -4,298 +4,308 @@ const linksSection = document.querySelector(".links");
 const filterInput = document.querySelector(".filter-links");
 
 const buildIcon = (icons) => {
-  // console.log(icons)
-  return icons
-    .map((icon) => {
-      return icon.name == "tailwindcss"
-        ? '<img src="./assets/image/tailwind-logomark.svg" class="w-7 shadow-none border-none"/>'
-        : `<span class='${icon.name} ${icon.color} text-2xl'></span>`;
-    })
-    .join(" ");
+	// console.log(icons)
+	return icons
+		.map((icon) => {
+			return icon.color == ""
+				? `<img src="./assets/image/tools/${icon.name}.svg" class="h-6 w-auto shadow-none border-none" alt="" />`
+				: `<span class='${icon.name} ${icon.color} text-[24px]'></span>`;
+		})
+		.join(" ");
 };
 
 const buildUrl = (github) => {
-  if (github.includes("http")) {
-    return github;
-  }
-  return "https://github.com/" + username + "/" + github;
+	if (github.includes("http")) {
+		return github;
+	}
+	return "https://github.com/" + username + "/" + github;
 };
 
 const buildLiveSiteUrl = (link) => {
-  return `
-        <a href="${link.liveSiteLink}" class="relative z-20 hover:underline decoration-sky-400 decoration-2" target="_blank">
-            <i class="fa-brands fa-chrome dark:text-white text-slate-700 not-italic"></i>
-            Live Site
+	return `
+        <a href="${link.liveSiteLink}" class="relative z-20 hover:underline decoration-indigo-400 decoration-2 text-sm text-slate-500" target="_blank">
+			Live Site
         </a>
     `;
 };
 
 const displayLinks = (links) => {
-  filterInput.classList.remove("hide");
-  for (const link of links) {
-    let listItem = document.createElement("li");
-    listItem.classList.add("link");
-    listItem.innerHTML = `
-            <div class='flex flex-col items-center gap-4 relative'>
-                <a href='${buildUrl(
-                  link.githubRepo
-                )}' class='dark:text-white text-slate-700 absolute z-10 inset-0' target='_blank'>
-                </a>
-                <h3 class='text-xl font-semibold dark:text-white text-slate-700'>
-                    <span class='flex justify-center gap-3'>
-                        ${buildIcon(link.icons)}
-                    </span>
-                    <br/> ${link.name}
+	filterInput.classList.remove("!hidden");
+	for (const link of links) {
+		let listItem = document.createElement("li");
+		listItem.classList.add("link");
+		listItem.innerHTML = `
+            <div class='flex flex-col items-start gap-4 relative bg-slate-50 rounded-2xl p-4'>
+				<h3>
+					<a href='${buildUrl(
+						link.githubRepo
+					)}' class='text-lg font-semibold dark:text-white text-slate-700 hover:underline decoration-indigo-400 underline-offset-4' target='_blank'>
+						${link.name}
+					</a>
                 </h3>
-                <div class="flex items-center gap-3">
-                    ${buildLiveSiteUrl(link)}
-                </div>
+                <div class='flex justify-between gap-3 items-end w-full'>
+					<div class='flex gap-3 items-center'>
+						${buildIcon(link.icons)}
+					</div>
+					${buildLiveSiteUrl(link)}
+				</div>
             </div>`;
-    linkList.append(listItem);
-  }
+		linkList.append(listItem);
+	}
 };
 
 // dynamic search
 filterInput.addEventListener("input", (e) => {
-  const search = e.target.value;
-  const links = document.querySelectorAll(".link");
-  const searchLowerText = search.toLowerCase();
+	const search = e.target.value;
+	const links = document.querySelectorAll(".link");
+	const searchLowerText = search.toLowerCase();
 
-  for (const link of links) {
-    const lowerText = link.innerText.toLowerCase();
-    if (lowerText.includes(searchLowerText)) {
-      link.classList.remove("hide");
-    } else {
-      link.classList.add("hide");
-    }
-  }
+	for (const link of links) {
+		const lowerText = link.innerText.toLowerCase();
+		if (lowerText.includes(searchLowerText)) {
+			link.classList.remove("!hidden");
+		} else {
+			link.classList.add("!hidden");
+		}
+	}
 });
 
 const links = [
-  {
-    name: "Bapontar Frontend",
-    githubRepo: "fe-bapontar",
-    icons: [
-      { name: "fa-brands fa-html5", color: "text-orange-600" },
-      { name: "fa-brands fa-square-js", color: "text-yellow-300" },
-      { name: "fa-brands fa-sass", color: "text-pink-500" },
-    ],
-    liveSiteLink: "https://bapontar.netlify.app/",
-  },
-  {
-    name: "Furniture App",
-    githubRepo: "luxspace-react",
-    icons: [
-      { name: "fa-brands fa-html5", color: "text-orange-600" },
-      { name: "fa-brands fa-square-js", color: "text-yellow-300" },
-      { name: "fa-brands fa-react", color: "text-sky-600" },
-      { name: "tailwindcss", color: "" },
-    ],
-    iconColor: "text-sky-600",
-    liveSiteLink: "https://bilpo-luxspace-react.netlify.app/",
-  },
-  {
-    name: "Bakery Store Frontend",
-    githubRepo: "fe-cherrybakery",
-    icons: [
-      { name: "fa-brands fa-html5", color: "text-orange-600" },
-      { name: "fa-brands fa-square-js", color: "text-yellow-300" },
-      { name: "fa-brands fa-sass", color: "text-pink-500" },
-    ],
-    liveSiteLink: "https://bilpo-luxspace-react.netlify.app/",
-  },
-  {
-    name: "Imanuel - Building Shop",
-    githubRepo: "fe-imanuelonline",
-    icons: [
-      { name: "fa-brands fa-html5", color: "text-orange-600" },
-      { name: "fa-brands fa-square-js", color: "text-yellow-300" },
-      { name: "fa-brands fa-sass", color: "text-pink-500" },
-    ],
-    liveSiteLink: "https://toko-imanuel.netlify.app/",
-  },
-  {
-    name: "Landing Page Compette",
-    githubRepo: "fe-compette",
-    icons: [
-      { name: "fa-brands fa-html5", color: "text-orange-600" },
-      { name: "fa-brands fa-square-js", color: "text-yellow-300" },
-      { name: "fa-brands fa-sass", color: "text-pink-500" },
-    ],
-    liveSiteLink: "https://fe-compette.netlify.app/",
-  },
-  {
-    name: "Cloning ~ BuildWith Angga",
-    githubRepo: "bwa-platform-frontend",
-    icons: [
-      { name: "fa-brands fa-html5", color: "text-orange-600" },
-      { name: "fa-brands fa-square-js", color: "text-yellow-300" },
-      { name: "fa-brands fa-react", color: "text-sky-600" },
-      { name: "tailwindcss", color: "" },
-    ],
-    iconColor: "text-sky-600",
-    liveSiteLink: "https://bwa-platform-frontend.netlify.app/",
-  },
-  {
-    name: "Landing Page Telepatia",
-    githubRepo: "fe-telepatia-sass",
-    icons: [
-      { name: "fa-brands fa-html5", color: "text-orange-600" },
-      { name: "fa-brands fa-square-js", color: "text-yellow-300" },
-      { name: "fa-brands fa-sass", color: "text-pink-500" },
-    ],
-    liveSiteLink: "https://fe-telepatia.netlify.app/",
-  },
-  {
-    name: "Landing Page Broperti",
-    githubRepo: "fe-broperti",
-    icons: [
-      { name: "fa-brands fa-html5", color: "text-orange-600" },
-      { name: "fa-brands fa-square-js", color: "text-yellow-300" },
-      { name: "fa-brands fa-sass", color: "text-pink-500" },
-    ],
-    liveSiteLink: "https://fe-broperti.netlify.app/",
-  },
-  {
-    name: "getshayna.com content",
-    githubRepo: "fe-broperti",
-    icons: [
-      { name: "fa-brands fa-html5", color: "text-orange-600" },
-      { name: "fa-brands fa-square-js", color: "text-yellow-300" },
-      { name: "tailwindcss", color: "" },
-    ],
-    liveSiteLink: "https://getshayna-element.netlify.app/",
-  },
-  {
-    name: "Crypto NFT",
-    githubRepo: "crypto-tailwind",
-    icons: [
-      { name: "fa-brands fa-html5", color: "text-orange-600" },
-      { name: "fa-brands fa-square-js", color: "text-yellow-300" },
-      { name: "tailwindcss", color: "" },
-    ],
-    liveSiteLink: "https://crypto-tailwind.netlify.app/",
-  },
-  {
-    name: "Workly Business",
-    githubRepo: "fe-workly-tailwind",
-    icons: [
-      { name: "fa-brands fa-html5", color: "text-orange-600" },
-      { name: "fa-brands fa-square-js", color: "text-yellow-300" },
-      { name: "tailwindcss", color: "" },
-    ],
-    liveSiteLink: "https://workly-tailwind.netlify.app/",
-  },
-  {
-    name: "Givmoney Finance Management",
-    githubRepo: "fe-givmoney-tailwind",
-    icons: [
-      { name: "fa-brands fa-html5", color: "text-orange-600" },
-      { name: "fa-brands fa-square-js", color: "text-yellow-300" },
-      { name: "tailwindcss", color: "" },
-    ],
-    liveSiteLink: "https://givmoney-tailwind.netlify.app/",
-  },
-  {
-    name: "HomeStay Landing Page",
-    githubRepo: "fe-house-tailwind",
-    icons: [
-      { name: "fa-brands fa-html5", color: "text-orange-600" },
-      { name: "fa-brands fa-square-js", color: "text-yellow-300" },
-      { name: "tailwindcss", color: "" },
-    ],
-    liveSiteLink: "https://house-tailwind.netlify.app/",
-  },
-  {
-    name: "Dropshipping Web App Template",
-    githubRepo: "maisya-tailwind3",
-    icons: [
-      { name: "fa-brands fa-html5", color: "text-orange-600" },
-      { name: "fa-brands fa-square-js", color: "text-yellow-300" },
-      { name: "tailwindcss", color: "" },
-    ],
-    liveSiteLink: "https://maisya.netlify.app/",
-  },
-  {
-    name: "Semina Education",
-    githubRepo: "semina-frontend",
-    icons: [
-      { name: "fa-brands fa-html5", color: "text-orange-600" },
-      { name: "fa-brands fa-square-js", color: "text-yellow-300" },
-      { name: "tailwindcss", color: "" },
-    ],
-    liveSiteLink: "https://semina.netlify.app/",
-  },
-  {
-    name: "Dashboard Moonton - Streaming",
-    githubRepo: "moonton-template",
-    icons: [
-      { name: "fa-brands fa-html5", color: "text-orange-600" },
-      { name: "fa-brands fa-square-js", color: "text-yellow-300" },
-      { name: "tailwindcss", color: "" },
-    ],
-    liveSiteLink: "https://moonton-template.netlify.app/",
-  },
-  {
-    name: "Showcase NFT",
-    githubRepo: "showcase-frontend-tailwind",
-    icons: [
-      { name: "fa-brands fa-html5", color: "text-orange-600" },
-      { name: "fa-brands fa-square-js", color: "text-yellow-300" },
-      { name: "tailwindcss", color: "" },
-    ],
-    liveSiteLink: "https://planetary-nft.netlify.app/",
-  },
-  {
-    name: "Cube Landing Page",
-    githubRepo: "cube-landing-reactjs",
-    icons: [
-      { name: "fa-brands fa-html5", color: "text-orange-600" },
-      { name: "fa-brands fa-square-js", color: "text-yellow-300" },
-      { name: "fa-brands fa-react", color: "text-sky-600" },
-    ],
-    liveSiteLink: "https://cube-landing-page.netlify.app",
-  },
-  {
-    name: "Resto - BuildWith_Angga Challenge",
-    githubRepo: "cube-landing-reactjs",
-    icons: [
-      { name: "fa-brands fa-html5", color: "text-orange-600" },
-      { name: "fa-brands fa-square-js", color: "text-yellow-300" },
-      { name: "fa-brands fa-sass", color: "text-pink-500" },
-    ],
-    liveSiteLink: "https://resto-bwa-challenge.netlify.app/",
-  },
-  {
-    name: "Foodyar Landing Page",
-    githubRepo: "foodyar-landing-tailwind",
-    icons: [
-      { name: "fa-brands fa-html5", color: "text-orange-600" },
-      { name: "fa-brands fa-square-js", color: "text-yellow-300" },
-      { name: "tailwindcss", color: "" },
-    ],
-    liveSiteLink: "https://billpebert.github.io/foodyar-landing-tailwind/",
-  },
-  {
-    name: "Dashboard HRIS - PowerHuman",
-    githubRepo: "powerhuman-tailwind",
-    icons: [
-      { name: "fa-brands fa-html5", color: "text-orange-600" },
-      { name: "fa-brands fa-square-js", color: "text-yellow-300" },
-      { name: "tailwindcss", color: "" },
-    ],
-    liveSiteLink: "https://billpebert.github.io/powerhuman-tailwind/",
-  },
-  {
-    name: "Travel - Travland",
-    githubRepo: "bwa-elements/tree/main/travland",
-    icons: [
-      { name: "fa-brands fa-html5", color: "text-orange-600" },
-      { name: "fa-brands fa-square-js", color: "text-yellow-300" },
-      { name: "tailwindcss", color: "" },
-    ],
-    liveSiteLink: "https://getshayna-element.netlify.app/travland/",
-  },
+	{
+		name: "Sewa Mobil Frontend",
+		githubRepo: "sewa-mobil-html",
+		icons: [
+			{ name: "fa-brands fa-html5", color: "text-orange-600" },
+			{ name: "javascript", color: "" },
+			{ name: "tailwindcss", color: "" },
+			{ name: "vuejs", color: "" },
+		],
+		liveSiteLink: "https://sewa-mobil-html.netlify.app/",
+	},
+	{
+		name: "Bapontar Frontend",
+		githubRepo: "fe-bapontar",
+		icons: [
+			{ name: "fa-brands fa-html5", color: "text-orange-600" },
+			{ name: "javascript", color: "" },
+			{ name: "sass", color: "" },
+		],
+		liveSiteLink: "https://bapontar.netlify.app/",
+	},
+	{
+		name: "Furniture App",
+		githubRepo: "luxspace-react",
+		icons: [
+			{ name: "fa-brands fa-html5", color: "text-orange-600" },
+			{ name: "javascript", color: "" },
+			{ name: "reactjs", color: "" },
+			{ name: "tailwindcss", color: "" },
+		],
+		iconColor: "text-sky-600",
+		liveSiteLink: "https://bilpo-luxspace-react.netlify.app/",
+	},
+	{
+		name: "Bakery Store Frontend",
+		githubRepo: "fe-cherrybakery",
+		icons: [
+			{ name: "fa-brands fa-html5", color: "text-orange-600" },
+			{ name: "javascript", color: "" },
+			{ name: "sass", color: "" },
+		],
+		liveSiteLink: "https://bilpo-luxspace-react.netlify.app/",
+	},
+	{
+		name: "Imanuel - Building Shop",
+		githubRepo: "fe-imanuelonline",
+		icons: [
+			{ name: "fa-brands fa-html5", color: "text-orange-600" },
+			{ name: "javascript", color: "" },
+			{ name: "sass", color: "" },
+		],
+		liveSiteLink: "https://toko-imanuel.netlify.app/",
+	},
+	{
+		name: "Landing Page Compette",
+		githubRepo: "fe-compette",
+		icons: [
+			{ name: "fa-brands fa-html5", color: "text-orange-600" },
+			{ name: "javascript", color: "" },
+			{ name: "sass", color: "" },
+		],
+		liveSiteLink: "https://fe-compette.netlify.app/",
+	},
+	{
+		name: "Cloning ~ BuildWith Angga",
+		githubRepo: "bwa-platform-frontend",
+		icons: [
+			{ name: "fa-brands fa-html5", color: "text-orange-600" },
+			{ name: "javascript", color: "" },
+			{ name: "reactjs", color: "" },
+			{ name: "tailwindcss", color: "" },
+		],
+		iconColor: "text-sky-600",
+		liveSiteLink: "https://bwa-platform-frontend.netlify.app/",
+	},
+	{
+		name: "Landing Page Telepatia",
+		githubRepo: "fe-telepatia-sass",
+		icons: [
+			{ name: "fa-brands fa-html5", color: "text-orange-600" },
+			{ name: "javascript", color: "" },
+			{ name: "sass", color: "" },
+		],
+		liveSiteLink: "https://fe-telepatia.netlify.app/",
+	},
+	{
+		name: "Landing Page Broperti",
+		githubRepo: "fe-broperti",
+		icons: [
+			{ name: "fa-brands fa-html5", color: "text-orange-600" },
+			{ name: "javascript", color: "" },
+			{ name: "sass", color: "" },
+		],
+		liveSiteLink: "https://fe-broperti.netlify.app/",
+	},
+	{
+		name: "getshayna.com content",
+		githubRepo: "fe-broperti",
+		icons: [
+			{ name: "fa-brands fa-html5", color: "text-orange-600" },
+			{ name: "javascript", color: "" },
+			{ name: "tailwindcss", color: "" },
+		],
+		liveSiteLink: "https://getshayna-element.netlify.app/",
+	},
+	{
+		name: "Crypto NFT",
+		githubRepo: "crypto-tailwind",
+		icons: [
+			{ name: "fa-brands fa-html5", color: "text-orange-600" },
+			{ name: "javascript", color: "" },
+			{ name: "tailwindcss", color: "" },
+		],
+		liveSiteLink: "https://crypto-tailwind.netlify.app/",
+	},
+	{
+		name: "Workly Business",
+		githubRepo: "fe-workly-tailwind",
+		icons: [
+			{ name: "fa-brands fa-html5", color: "text-orange-600" },
+			{ name: "javascript", color: "" },
+			{ name: "tailwindcss", color: "" },
+		],
+		liveSiteLink: "https://workly-tailwind.netlify.app/",
+	},
+	{
+		name: "Givmoney Finance Management",
+		githubRepo: "fe-givmoney-tailwind",
+		icons: [
+			{ name: "fa-brands fa-html5", color: "text-orange-600" },
+			{ name: "javascript", color: "" },
+			{ name: "tailwindcss", color: "" },
+		],
+		liveSiteLink: "https://givmoney-tailwind.netlify.app/",
+	},
+	{
+		name: "HomeStay Landing Page",
+		githubRepo: "fe-house-tailwind",
+		icons: [
+			{ name: "fa-brands fa-html5", color: "text-orange-600" },
+			{ name: "javascript", color: "" },
+			{ name: "tailwindcss", color: "" },
+		],
+		liveSiteLink: "https://house-tailwind.netlify.app/",
+	},
+	{
+		name: "Dropshipping Landing Template",
+		githubRepo: "maisya-tailwind3",
+		icons: [
+			{ name: "fa-brands fa-html5", color: "text-orange-600" },
+			{ name: "javascript", color: "" },
+			{ name: "tailwindcss", color: "" },
+		],
+		liveSiteLink: "https://maisya.netlify.app/",
+	},
+	{
+		name: "Semina Education",
+		githubRepo: "semina-frontend",
+		icons: [
+			{ name: "fa-brands fa-html5", color: "text-orange-600" },
+			{ name: "javascript", color: "" },
+			{ name: "tailwindcss", color: "" },
+		],
+		liveSiteLink: "https://semina.netlify.app/",
+	},
+	{
+		name: "Dashboard Moonton - Streaming",
+		githubRepo: "moonton-template",
+		icons: [
+			{ name: "fa-brands fa-html5", color: "text-orange-600" },
+			{ name: "javascript", color: "" },
+			{ name: "tailwindcss", color: "" },
+		],
+		liveSiteLink: "https://moonton-template.netlify.app/",
+	},
+	{
+		name: "Showcase NFT",
+		githubRepo: "showcase-frontend-tailwind",
+		icons: [
+			{ name: "fa-brands fa-html5", color: "text-orange-600" },
+			{ name: "javascript", color: "" },
+			{ name: "tailwindcss", color: "" },
+		],
+		liveSiteLink: "https://planetary-nft.netlify.app/",
+	},
+	{
+		name: "Cube Landing Page",
+		githubRepo: "cube-landing-reactjs",
+		icons: [
+			{ name: "fa-brands fa-html5", color: "text-orange-600" },
+			{ name: "javascript", color: "" },
+			{ name: "reactjs", color: "" },
+		],
+		liveSiteLink: "https://cube-landing-page.netlify.app",
+	},
+	{
+		name: "Resto - BuildWith_Angga Challenge",
+		githubRepo: "cube-landing-reactjs",
+		icons: [
+			{ name: "fa-brands fa-html5", color: "text-orange-600" },
+			{ name: "javascript", color: "" },
+			{ name: "sass", color: "" },
+		],
+		liveSiteLink: "https://resto-bwa-challenge.netlify.app/",
+	},
+	{
+		name: "Foodyar Landing Page",
+		githubRepo: "foodyar-landing-tailwind",
+		icons: [
+			{ name: "fa-brands fa-html5", color: "text-orange-600" },
+			{ name: "javascript", color: "" },
+			{ name: "tailwindcss", color: "" },
+		],
+		liveSiteLink: "https://billpebert.github.io/foodyar-landing-tailwind/",
+	},
+	{
+		name: "Dashboard HRIS - PowerHuman",
+		githubRepo: "powerhuman-tailwind",
+		icons: [
+			{ name: "fa-brands fa-html5", color: "text-orange-600" },
+			{ name: "javascript", color: "" },
+			{ name: "tailwindcss", color: "" },
+		],
+		liveSiteLink: "https://billpebert.github.io/powerhuman-tailwind/",
+	},
+	{
+		name: "Travel - Travland",
+		githubRepo: "bwa-elements/tree/main/travland",
+		icons: [
+			{ name: "fa-brands fa-html5", color: "text-orange-600" },
+			{ name: "javascript", color: "" },
+			{ name: "tailwindcss", color: "" },
+		],
+		liveSiteLink: "https://getshayna-element.netlify.app/travland/",
+	},
 ];
 
 displayLinks(links);
