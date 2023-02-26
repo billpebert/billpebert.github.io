@@ -33,23 +33,21 @@ const displayLinks = (links) => {
 	filterInput.classList.remove("!hidden");
 	for (const link of links) {
 		let listItem = document.createElement("li");
-		listItem.classList.add("link");
+		listItem.classList.add("contentItem");
 		listItem.innerHTML = `
-            <div class='flex flex-col items-start gap-4 relative bg-slate-50 rounded-2xl p-4'>
-				<h3>
-					<a href='${buildUrl(
-						link.githubRepo
-					)}' class='text-lg font-semibold dark:text-white text-slate-700 hover:underline decoration-indigo-400 underline-offset-4' target='_blank'>
-						${link.name}
-					</a>
-                </h3>
-                <div class='flex justify-between gap-3 items-end w-full'>
-					<div class='flex gap-3 items-center'>
-						${buildIcon(link.icons)}
-					</div>
-					${buildLiveSiteUrl(link)}
+			<h3>
+				<a href='${buildUrl(
+					link.githubRepo
+				)}' class='text-base xl:text-xl font-semibold dark:text-white text-slate-700 hover:underline decoration-indigo-400 underline-offset-4' target='_blank'>
+					${link.name}
+				</a>
+			</h3>
+			<div class='flex justify-between gap-3 items-end w-full mt-auto'>
+				<div class='flex gap-3 items-center'>
+					${buildIcon(link.icons)}
 				</div>
-            </div>`;
+				${buildLiveSiteUrl(link)}
+			</div>`;
 		linkList.append(listItem);
 	}
 };
@@ -57,7 +55,7 @@ const displayLinks = (links) => {
 // dynamic search
 filterInput.addEventListener("input", (e) => {
 	const search = e.target.value;
-	const links = document.querySelectorAll(".link");
+	const links = document.querySelectorAll(".contentItem");
 	const searchLowerText = search.toLowerCase();
 
 	for (const link of links) {
