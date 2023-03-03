@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&display=swap');
 
 /*
 ! tailwindcss v3.1.8 | MIT License | https://tailwindcss.com
@@ -418,7 +418,7 @@ video {
 }
 
 body{
-  font-family: Nunito, sans-serif;
+  font-family: DM Sans, sans-serif;
 }
 
 *, ::before, ::after{
@@ -848,6 +848,10 @@ body{
 
 .font-semibold{
   font-weight: 600;
+}
+
+.font-medium{
+  font-weight: 500;
 }
 
 .text-slate-800{

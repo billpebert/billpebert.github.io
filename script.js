@@ -38,7 +38,7 @@ const displayLinks = (links) => {
 			<h3>
 				<a href='${buildUrl(
 					link.githubRepo
-				)}' class='text-base xl:text-xl font-semibold dark:text-white text-slate-700 hover:underline decoration-indigo-400 underline-offset-4' target='_blank'>
+				)}' class='text-base xl:text-xl font-medium dark:text-white text-slate-700 hover:underline decoration-indigo-400 underline-offset-4' target='_blank'>
 					${link.name}
 				</a>
 			</h3>
@@ -69,6 +69,17 @@ filterInput.addEventListener("input", (e) => {
 });
 
 const links = [
+	{
+		name: "UpSales - POS",
+		githubRepo: "upsales-html",
+		icons: [
+			{ name: "fa-brands fa-html5", color: "text-orange-600" },
+			{ name: "javascript", color: "" },
+			{ name: "tailwindcss", color: "" },
+			{ name: "vuejs", color: "" },
+		],
+		liveSiteLink: "https://upsales-html.netlify.app/",
+	},
 	{
 		name: "Sewa Mobil Frontend",
 		githubRepo: "sewa-mobil-html",
