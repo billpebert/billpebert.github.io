@@ -70,6 +70,24 @@ filterInput.addEventListener("input", (e) => {
 
 const links = [
 	{
+		name: "To Do List App",
+		githubRepo: "todo-list-vue",
+		icons: [
+			{ name: "vuejs", color: "" },
+			{ name: "tailwindcss", color: "" },
+		],
+		liveSiteLink: "https://billpebert-todo-list.netlify.app/",
+	},
+	{
+		name: "Website UI Kit",
+		githubRepo: "billkit-frontend",
+		icons: [
+			{ name: "tailwindcss", color: "" },
+			{ name: "vuejs", color: "" },
+		],
+		liveSiteLink: "https://billkit-frontend.netlify.app/",
+	},
+	{
 		name: "UpSales - POS",
 		githubRepo: "upsales-html",
 		icons: [
