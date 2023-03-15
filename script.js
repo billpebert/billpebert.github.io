@@ -71,6 +71,15 @@ filterInput.addEventListener("input", (e) => {
 const links = [
 	{
 		name: "To Do List App",
+		githubRepo: "todo-app-reactjs",
+		icons: [
+			{ name: "reactjs", color: "" },
+			{ name: "tailwindcss", color: "" },
+		],
+		liveSiteLink: "https://bilpo-react-todo.netlify.app/",
+	},
+	{
+		name: "To Do List App",
 		githubRepo: "todo-list-vue",
 		icons: [
 			{ name: "vuejs", color: "" },
@@ -124,7 +133,6 @@ const links = [
 		githubRepo: "luxspace-react",
 		icons: [
 			{ name: "fa-brands fa-html5", color: "text-orange-600" },
-			{ name: "javascript", color: "" },
 			{ name: "reactjs", color: "" },
 			{ name: "tailwindcss", color: "" },
 		],
@@ -166,7 +174,6 @@ const links = [
 		githubRepo: "bwa-platform-frontend",
 		icons: [
 			{ name: "fa-brands fa-html5", color: "text-orange-600" },
-			{ name: "javascript", color: "" },
 			{ name: "reactjs", color: "" },
 			{ name: "tailwindcss", color: "" },
 		],
