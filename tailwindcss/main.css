@@ -16,6 +16,6 @@
 
 @layer components {
     .contentItem {
-        @apply relative flex flex-col items-start h-full gap-4 p-4 transition duration-300 ease-in-out bg-slate-100 rounded-2xl hover:shadow-md hover:scale-[102%];
+        @apply relative flex flex-col items-start h-full gap-8 p-4 transition-all duration-300 ease-in-out bg-slate-100 rounded-2xl hover:shadow-md hover:scale-[102%] min-h-[180px] md:min-h-fit;
     }
 }

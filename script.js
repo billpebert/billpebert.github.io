@@ -42,7 +42,7 @@ const displayLinks = (links) => {
 					${link.name}
 				</a>
 			</h3>
-			<div class='flex justify-between gap-3 items-end w-full mt-auto'>
+			<div class='flex justify-between flex-col md:flex-row gap-3 items-end w-full mt-auto'>
 				<div class='flex gap-3 items-center'>
 					${buildIcon(link.icons)}
 				</div>
@@ -76,7 +76,7 @@ const links = [
 			{ name: "reactjs", color: "" },
 			{ name: "tailwindcss", color: "" },
 		],
-		liveSiteLink: "https://bilpo-react-todo.netlify.app/",
+		liveSiteLink: "https://todo-app-reactjs-three.vercel.app/",
 	},
 	{
 		name: "To Do List App",
@@ -88,7 +88,7 @@ const links = [
 		liveSiteLink: "https://billpebert-todo-list.netlify.app/",
 	},
 	{
-		name: "Website UI Kit",
+		name: "ECommerce UI Kit",
 		githubRepo: "billkit-frontend",
 		icons: [
 			{ name: "tailwindcss", color: "" },
@@ -271,7 +271,7 @@ const links = [
 		liveSiteLink: "https://semina.netlify.app/",
 	},
 	{
-		name: "Dashboard Moonton - Streaming",
+		name: "Dashboard Moonton",
 		githubRepo: "moonton-template",
 		icons: [
 			{ name: "fa-brands fa-html5", color: "text-orange-600" },
@@ -301,7 +301,7 @@ const links = [
 		liveSiteLink: "https://cube-landing-page.netlify.app",
 	},
 	{
-		name: "Resto - BuildWith_Angga Challenge",
+		name: "Resto Landing Page",
 		githubRepo: "cube-landing-reactjs",
 		icons: [
 			{ name: "fa-brands fa-html5", color: "text-orange-600" },
