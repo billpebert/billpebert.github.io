@@ -70,6 +70,16 @@ filterInput.addEventListener("input", (e) => {
 
 const links = [
 	{
+		name: "Webstack Landing Page",
+		githubRepo: "webstack-dev-html",
+		icons: [
+			{ name: "fa-brands fa-html5", color: "text-orange-600" },
+			{ name: "javascript", color: "" },
+			{ name: "tailwindcss", color: "" },
+		],
+		liveSiteLink: "https://webstack-dev.netlify.app/",
+	},
+	{
 		name: "To Do List App",
 		githubRepo: "todo-app-reactjs",
 		icons: [
