@@ -70,6 +70,16 @@ filterInput.addEventListener("input", (e) => {
 
 const links = [
 	{
+		name: "NiagaHoster Blog",
+		githubRepo: "niagahoster-blog",
+		icons: [
+			{ name: "reactjs", color: "" },
+			{ name: "tailwindcss", color: "" },
+			{ name: "flowbite", color: "" },
+		],
+		liveSiteLink: "https://niagahoster-blog.netlify.app/",
+	},
+	{
 		name: "Webstack Landing Page",
 		githubRepo: "webstack-dev-html",
 		icons: [
