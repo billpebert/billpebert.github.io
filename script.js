@@ -8,7 +8,7 @@ const buildIcon = (icons) => {
 	return icons
 		.map((icon) => {
 			return icon.color == ""
-				? `<img src="./assets/image/tools/${icon.name}.svg" class="h-6 w-auto shadow-none border-none" alt="" />`
+				? `<img src="./assets/image/tools/${icon.name}.svg" class="h-6 w-auto shadow-none border-none" title="${icon.name}" alt="${icon.name}" />`
 				: `<span class='${icon.name} ${icon.color} text-[24px]'></span>`;
 		})
 		.join(" ");
