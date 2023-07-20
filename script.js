@@ -139,6 +139,15 @@ const links = [
 		liveSiteLink: "https://sewa-mobil-html.netlify.app/",
 	},
 	{
+		name: "Simple Blog with Redux",
+		githubRepo: "react-redux-toolkit",
+		icons: [
+			{ name: "reactjs", color: "" },
+			{ name: "tailwindcss", color: "" },
+		],
+		liveSiteLink: "https://bilpo-redux-blog.netlify.app/",
+	},
+	{
 		name: "Bapontar Frontend",
 		githubRepo: "fe-bapontar",
 		icons: [
