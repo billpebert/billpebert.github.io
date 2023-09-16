@@ -70,6 +70,16 @@ filterInput.addEventListener("input", (e) => {
 
 const links = [
 	{
+		name: "Rental Mobil Manado",
+		githubRepo: "",
+		icons: [
+			{ name: "vuejs", color: "" },
+			{ name: "tailwindcss", color: "" },
+			{ name: "laravel-logomark.min", color: "" },
+		],
+		liveSiteLink: "https://celerentmanado.com/",
+	},
+	{
 		name: "NiagaHoster Blog",
 		githubRepo: "niagahoster-blog",
 		icons: [
