@@ -70,6 +70,16 @@ filterInput.addEventListener("input", (e) => {
 
 const links = [
 	{
+		name: "Tickety Landing Page",
+		githubRepo: "tickety-html",
+		icons: [
+			{ name: "fa-brands fa-html5", color: "text-orange-600" },
+			{ name: "javascript", color: "" },
+			{ name: "tailwindcss", color: "" },
+		],
+		liveSiteLink: "https://tickety-html.netlify.app/",
+	},
+	{
 		name: "Rental Mobil Manado",
 		githubRepo: "",
 		icons: [
