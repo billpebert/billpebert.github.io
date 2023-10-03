@@ -81,7 +81,7 @@ const links = [
 	},
 	{
 		name: "Tickety Landing Page",
-		githubRepo: "tickety-html",
+		githubRepo: "",
 		icons: [
 			{ name: "fa-brands fa-html5", color: "text-orange-600" },
 			{ name: "javascript", color: "" },
