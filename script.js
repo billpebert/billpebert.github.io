@@ -70,6 +70,16 @@ filterInput.addEventListener("input", (e) => {
 
 const links = [
 	{
+		name: "YTA Nusantara Landing Page",
+		githubRepo: "yta-nusantara-html",
+		icons: [
+			{ name: "fa-brands fa-html5", color: "text-orange-600" },
+			{ name: "javascript", color: "" },
+			{ name: "tailwindcss", color: "" },
+		],
+		liveSiteLink: "https://yta-nusantara.netlify.app/",
+	},
+	{
 		name: "Tickety Landing Page",
 		githubRepo: "tickety-html",
 		icons: [
