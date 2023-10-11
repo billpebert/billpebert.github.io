@@ -148,7 +148,7 @@ const links = [
 	},
 	{
 		name: "UpSales - POS",
-		githubRepo: "upsales-html",
+		githubRepo: "",
 		icons: [
 			{ name: "fa-brands fa-html5", color: "text-orange-600" },
 			{ name: "javascript", color: "" },
@@ -156,6 +156,16 @@ const links = [
 			{ name: "vuejs", color: "" },
 		],
 		liveSiteLink: "https://upsales-html.netlify.app/",
+	},
+	{
+		name: "Dewata - Desa Digital Dashboard",
+		githubRepo: "",
+		icons: [
+			{ name: "fa-brands fa-html5", color: "text-orange-600" },
+			{ name: "javascript", color: "" },
+			{ name: "tailwindcss", color: "" },
+		],
+		liveSiteLink: "https://desadigital-html.netlify.app/",
 	},
 	{
 		name: "Sewa Mobil Frontend",
@@ -229,7 +239,7 @@ const links = [
 		liveSiteLink: "https://fe-compette.netlify.app/",
 	},
 	{
-		name: "Cloning ~ BuildWith Angga",
+		name: "Cloning ~ BuildWith Angga Landing Page",
 		githubRepo: "bwa-platform-frontend",
 		icons: [
 			{ name: "fa-brands fa-html5", color: "text-orange-600" },
@@ -259,16 +269,16 @@ const links = [
 		],
 		liveSiteLink: "https://fe-broperti.netlify.app/",
 	},
-	{
-		name: "getshayna.com content",
-		githubRepo: "fe-broperti",
-		icons: [
-			{ name: "fa-brands fa-html5", color: "text-orange-600" },
-			{ name: "javascript", color: "" },
-			{ name: "tailwindcss", color: "" },
-		],
-		liveSiteLink: "https://getshayna-element.netlify.app/",
-	},
+	// {
+	// 	name: "getshayna.com content",
+	// 	githubRepo: "fe-broperti",
+	// 	icons: [
+	// 		{ name: "fa-brands fa-html5", color: "text-orange-600" },
+	// 		{ name: "javascript", color: "" },
+	// 		{ name: "tailwindcss", color: "" },
+	// 	],
+	// 	liveSiteLink: "https://getshayna-element.netlify.app/",
+	// },
 	{
 		name: "Crypto NFT",
 		githubRepo: "crypto-tailwind",
