@@ -16,13 +16,20 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/brands.min.css"
             integrity="sha512-nS1/hdh2b0U8SeA8tlo7QblY6rY6C+MgkZIeRzJQQvMsFfMQFUKp+cgMN2Uuy+OtbQ4RoLMIlO2iF7bIEY3Oyg=="
             crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
         <script src="script.js" defer></script>
     </head>
 
     <body>
         <!-- <img src="/assets/svg/background.svg" class="absolute top-0 right-0 max-h-screen -z-10" alt=""> -->
         <main class="container">
-            <section class="flex flex-wrap items-center justify-center gap-6 pt-10 md:gap-8">
+            <section class="flex flex-wrap items-center justify-center h-screen gap-6 pt-10 md:gap-8">
+                <!-- Skeleton Loader -->
+                <div class="animate-pulse w-[225px] h-[485px] rounded-[20px] bg-white overflow-hidden shadow-md" id="skeletonLoader">
+                    <div class="w-full h-full bg-slate-100"></div>
+                </div>
+
+
                 <!-- START: Fiverr Badge -->
                 <!-- Put this code anywhere in the body of your page where you want the badge to show up. -->
                 <div itemscope itemtype='http://schema.org/Person' class="hidden fiverr-seller-widget">
@@ -54,7 +61,8 @@
                     <div class="text-2xl font-bold md:text-4xl dark:text-white text-slate-800">
                         Billy Petra Gilbert
                         <p class="mt-1 text-base font-normal">
-                            Frontend Engineer & Fiverr seller
+                            Frontend Developer 
+                            <!-- & Fiverr seller -->
                         </p>
                     </div>
                     <div class="flex items-start gap-4 lg:flex-row">
@@ -64,21 +72,22 @@
                         <a href="https://github.com/billpebert/" class="text-3xl">
                             <span class="text-slate-800 dark:text-white fa-brands fa-github"></span>
                         </a>
-                        <a href="/assets/cv/CV-Billy-080223.pdf"
+                        <a href="/assets/cv/CV-BillyPetraGilbert.pdf"
                             class="px-5 py-2 text-sm font-bold text-white bg-indigo-600 rounded-full max-w-max"
                             target="_blank">
-                            My CV
+                            My Curriculum Vitae
                         </a>
                     </div>
                 </div>
             </section>
-            <section class="flex flex-col items-center pt-20 links">
+
+            <section class="relative flex flex-col items-center pt-20 links">
                 <input type="text"
                     class="py-3 rounded-full filter-links hide bg-slate-100 px-7 w-full lg:w-1/2 md:min-w-[300px]focus:ring-2 focus:ring-indigo-400 outline-none text-slate-500 placeholder:text-slate-500"
                     placeholder="Find Project" />
 
                 <!-- Content generated from script.js -->
-                <ul class="grid w-full grid-cols-2 gap-4 mt-10 md:gap-6 link-list md:grid-cols-3"></ul>
+                <ul class="sticky top-0 grid w-full grid-cols-2 gap-4 mt-10 md:gap-6 link-list md:grid-cols-3"></ul>
             </section>
             <h4 class="pt-20 pb-5 text-center text-slate-500">
                 Nice to meet you 😉
@@ -87,48 +96,11 @@
 
         <script src="https://code.jquery.com/jquery-3.6.4.min.js"
             integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
         <script type="text/javascript">
-            $(() => {
-                setTimeout(() => {
-                    // const linkedinAvatar = "https://media.licdn.com/dms/image/D5603AQF4g03rGKloSg/profile-displayphoto-shrink_200_200/0/1675840105509?e=1690416000&v=beta&t=_tp5ifEUT_LlsOeuDnUAs9r7zLEUB4_ZOL18GvXWae0"
-
-                    // $('.fiverr-profile-img').attr('src', linkedinAvatar)
-                    //     .css({ border: 0 })
-
-                    $('.fiverr-seller-content')
-                        .css({
-                            'position': 'relative',
-                            overflow: 'hidden',
-                            height: 'auto',
-                            paddingBottom: '20px',
-                            borderRadius: '20px'
-                        })
-
-                    $('.fiverr-seller-widget').removeClass('hidden')
-
-                    $('.fiverr-seller-text').css({ 'margin-top': '30px' }).addClass('!font-nunito font-semibold')
-                    $('.fiverr-seller-category').addClass('!font-nunito')
-
-                    $('.fiverr-icon')
-                        .css({
-                            'width': '50px',
-                            'height': '50px',
-                            'position': 'absolute',
-                            'z-index': 50, 'left': '50%',
-                            'top': '50%',
-                            'transform': 'translateX(-50%) translateY(-20%)',
-                            'margin': 0
-                        })
-
-                    $('.fiverr-seller-content .crop .overlay').remove()
-                    $('.fiverr-seller-content .crop').css({
-                        height: 'auto'
-                    })
-
-                    $('.check-gigs-btn').addClass('!font-nunito !font-semibold !border-none')
-                }, 1000);
-            })
+            AOS.init();
         </script>
+        <script src="/assets/scripts/fiverr-badge-config.js"></script>
     </body>
 
 </html>
