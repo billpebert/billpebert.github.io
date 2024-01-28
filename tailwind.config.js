@@ -7,7 +7,7 @@ module.exports = {
   content: ["./*.{html,js}"],
   theme: {
     fontFamily: {
-      nunito: "DM Sans, sans-serif",
+      nunito: "Plus Jakarta Sans, sans-serif",
     },
     container: {
       center: true,

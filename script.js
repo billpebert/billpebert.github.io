@@ -23,7 +23,7 @@ const buildUrl = (github) => {
 
 const buildLiveSiteUrl = (link) => {
 	return `
-        <a href="${link.liveSiteLink}" class="relative z-20 hover:underline decoration-indigo-400 decoration-2 text-sm text-slate-500" target="_blank">
+        <a href="${link.liveSiteLink}" class="relative z-20 hover:underline decoration-blue-400 decoration-2 text-xs sm:text-sm text-slate-500" target="_blank">
 			Live Site
         </a>
     `;
@@ -38,7 +38,7 @@ const displayLinks = (links) => {
 			<h3>
 				<a href='${buildUrl(
 					link.githubRepo
-				)}' class='text-base xl:text-xl font-medium dark:text-white text-slate-700 hover:underline decoration-indigo-400 underline-offset-4' target='_blank'>
+				)}' class='text-sm sm:text-base xl:text-xl font-medium dark:text-white text-slate-700 hover:underline decoration-blue-400 underline-offset-4' target='_blank'>
 					${link.name}
 				</a>
 			</h3>
